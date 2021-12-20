@@ -106,9 +106,11 @@
     <Compile Include="Entidades\Periodo.cs" />
     <Compile Include="Entidades\Pessoa.cs" />
     <Compile Include="Entidades\Usuario.cs" />
-    <Compile Include="Infraestrutura\SistemaAcademicoDbContext.cs" />
+    <Compile Include="Infraestrutura\AcademicoDbContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\UsuarioService.cs" />
+    <Compile Include="ViewModels\UsuarioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
