@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaAcademico.Dto;
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaAcademico.Entidades
@@ -12,6 +13,18 @@ namespace SistemaAcademico.Entidades
         public virtual Pessoa Pessoa { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
+
+
+        public static Usuario From(UsuarioDto dto)
+        {
+            return new Usuario()
+            {
+                Id = Guid.NewGuid(),
+                Pessoa = Pessoa.From(dto),
+                Login = dto.Login,
+                Senha = dto.Senha
+            };
+        }
 
     }
 }
